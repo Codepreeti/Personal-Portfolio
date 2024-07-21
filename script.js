@@ -7,6 +7,20 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 };
 
+// for read more and read less button in about section
+
+document.getElementById('read-more-btn').addEventListener('click', function () {
+    var moreInfo = document.getElementById('more-info');
+    if (moreInfo.style.display === 'none') {
+        moreInfo.style.display = 'block';
+        this.textContent = 'Read Less';
+    } else {
+        moreInfo.style.display = 'none';
+        this.textContent = 'Read More';
+    }
+});
+
+
 /* scroll section active link */
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
@@ -18,7 +32,7 @@ window.onscroll = () => {
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
-        if(top >= offset && top < offset + height) {
+        if (top >= offset && top < offset + height) {
             navLinks.forEach(links => {
                 links.classList.remove('active');
                 document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
@@ -29,7 +43,7 @@ window.onscroll = () => {
     /* sticky navbar */
     let header = document.querySelector('header');
 
-    header.classList.toggle('sticky',window.scrollY > 100);
+    header.classList.toggle('sticky', window.scrollY > 100);
 
     /* remove toogle icon and navbar when click navbar link(scroll) */
     menuIcon.classList.remove('bx-x');
@@ -45,7 +59,8 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .projects-box, .contact form', { origin: 'bottom' });
+ScrollReveal().reveal('.home-img, .projects-box, .contact form, .services-box', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+ScrollReveal().reveal('.bar span', { origin: 'left' });
 ScrollReveal().reveal('.education-row', { origin: 'left' });
