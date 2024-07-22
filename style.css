@@ -788,7 +788,7 @@ span {
     }
 }
 
-@media (max-width: 617px) {
+@media (max-width: 627px) {
 
     .logo img {
         height: 12vh;
@@ -809,7 +809,7 @@ span {
 
     .logo img {
         height: 12vh;
-        width: 10vw;
+        width: 13vw;
         padding: .2rem .2rem;
         cursor: default;
     }
