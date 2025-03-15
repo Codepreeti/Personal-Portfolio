@@ -88,7 +88,7 @@ section {
 }
 
 .home img {
-    width: 22vw;
+    width: 80%;
     margin: 7rem;
     border: 5px solid var(--main-color);
     border-radius: 50%;
@@ -330,9 +330,9 @@ span {
 }
 
 
-.skills-content .progress .bar span[data-width] {
-    width: attr(data-width);
-}
+/* .skills-content .progress .bar span[data-width] {
+    width: inherit;
+} */
 
 @keyframes fillSkillBar {
     0% {
@@ -340,7 +340,8 @@ span {
     }
 
     100% {
-        width: attr(data-width);
+        /* width: attr(data-width); */
+        width: var(--width, 90%); /* Default 70%, but will be overridden */
     }
 }
 
@@ -349,31 +350,31 @@ span {
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
-    width: 65%;
+    width: 70%;
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
-    width: 80%;
+    width: 85%;
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
-    width: 50%;
+    width: 65%;
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
-    width: 80%;
-}
-
-.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
     width: 90%;
 }
 
+.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
+    width: 80%;
+}
+
 .skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
-    width: 75%;
+    width: 85%;
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
-    width: 70%;
+    width: 60%;
 }
 
 .resume {
@@ -523,11 +524,11 @@ span {
 }
 
 .projects-layer h4 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .projects-layer p {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     margin: .3rem 0 1rem;
 }
 
@@ -563,8 +564,8 @@ span {
 }
 
 .services-container .services-box {
-    width: 35vw;
-    height: 51vh;
+    width: 35%;
+    height: 50%;
     flex: 1 1 30rem;
     background: var(--bg-color);
     padding: 3rem 2rem 4rem;
@@ -705,7 +706,7 @@ span {
     }
 
     .services-container .services-box {
-        height: 58vh;
+        height: 58%;
     }
 }
 
