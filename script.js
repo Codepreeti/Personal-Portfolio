@@ -20,6 +20,16 @@ document.getElementById('read-more-btn').addEventListener('click', function () {
     }
 });
 
+// for animation of span bar in skill section
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".skills-content .progress .bar span").forEach(span => {
+        let width = span.getAttribute("data-width");
+        if (width) {
+            span.style.setProperty("--width", width);
+        }
+    });
+});
+
 
 /* scroll section active link */
 let sections = document.querySelectorAll('section');
